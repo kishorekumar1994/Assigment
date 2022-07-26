@@ -1,0 +1,74 @@
+1.Difference between http 1.1 and http 2 ?
+
+Hypertext Transfer Protocol(HTTP)
+
+---->HTTP/1.1
+
+Release of HTTP/1.1 in 1997.
+keeps all requests and responses in plain text format.
+HTTP/1.1. is much slower and less efficient than HTTP/2.
+HTTP1 loads a single request for every TCP connection.
+There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+It uses requests resource Inlining for use getting multiple pages.
+It compresses data by itself.
+
+
+
+
+---->HTTP/2 
+
+HTTP/2 came into use in 2015.
+Uses the binary framing layer to encapsulate all messages in binary format.
+HTTP/2 is much faster and more efficient than HTTP/1.1.
+It prioritizes content during the loading process.
+HTTP2 avoids network delay by using multiplexing.
+It allows multiplexing so one TCP connection is required for multiple requests.
+Significantly improving both site performance and server efficiency.
+Gets rid of a lot of the additional time that it takes to establish a new connection for each request.
+It uses PUSH frame by server that collects all multiple pages.
+It uses HPACK for data compression.
+
+             ---------- * ---------  * ------------
+
+
+2.Objects and its internal representation in javascript ?
+
+Objects, in JavaScript, is the most important data-type and forms the building blocks for modern JavaScript.
+These objects are quite different from JavaScript’s primitive data-types(Number, String, Boolean, null, undefined and symbol)
+in the sense that while these primitive data-types all store a single value each (depending on their types).
+
+  Objects are more complex and each object may contain any combination of these primitive data-types as well as reference data-types.
+An object, is a reference data type.
+Variables that are assigned a reference value are given a reference or a pointer to that value.
+That reference or pointer points to the location in memory where the object is stored.
+The variables don’t actually store the value.
+
+  Loosely speaking,objects in JavaScript may be defined as an unordered collection of related data,
+of primitive or reference types, in the form of “key: value” pairs.
+These keys can be variables or functions and are called properties and methods, respectively, in the context of an object.
+
+An object can be created with figure brackets {…} with an optional list of properties.
+A property is a “key: value” pair, where a key is a string (also called a “property name”), and value can be anything.
+Let us visualize this with the following syntax for creating an object in JavaScript.
+
+Syntax:
+
+let object_name = {
+    key_name : value,
+    ...
+}
+
+example of a JavaScript Object below :
+
+let school = {
+    name : "ABC School",
+    location : "Chennai",
+    established : "2022"
+}
+
+In the above example “name”, “location”, “established” are all “keys” and
+ “ABC School”, “Chennai” and 2022 are values of these keys respectively.
+Each of these keys is referred to as properties of the object.
+
+        ---------------- *** -------------*** ---------------
+
